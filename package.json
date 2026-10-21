@@ -1,0 +1,11 @@
+{
+  "name": "planilla-web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "npm --prefix frontend run build",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "start:backend": "npm --prefix backend start",
+    "deploy": "npm run build && firebase deploy --only hosting,functions"
+  }
+}

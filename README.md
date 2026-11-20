@@ -107,9 +107,17 @@ npm run start:dev
 │   ├── components/
 │   ├── lib/
 │   └── package.json
+├── docs/                       # arquitectura C4, secuencias y modelo de datos
 ├── docker-compose.yml          # entorno local completo
 └── README.md
 ```
+
+## Documentación
+
+- [Índice de documentación](docs/README.md)
+- [Arquitectura C4](docs/arquitectura-c4.md): contexto, contenedores, componentes y despliegue
+- [Diagramas de secuencia](docs/secuencias.md): login, refresh, consentimiento, emisión, V°B°/pago, PDF+Correo
+- [Modelo de datos](docs/modelo-datos.md): diagrama entidad-relación del esquema Prisma
 
 ## Modelo de datos (Prisma)
 

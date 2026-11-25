@@ -13,7 +13,7 @@ services:
       - "5433:5432"
 
   backend:
-    build: ./backend
+    build: ../planilla-backend
     container_name: planilla-api
     environment:
       DATABASE_URL: postgresql://planilla:planilla@postgres:5432/planilla
@@ -33,10 +33,11 @@ services:
       - postgres
 
   frontend:
-    build: ./frontend
+    build:
+      context: ../planilla-frontend
+      args:
+        API_URL: http://backend:3001
     container_name: planilla-web
-    environment:
-      API_URL: http://backend:3001
     ports:
       - "3010:3000"
     depends_on:
